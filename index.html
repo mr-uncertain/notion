@@ -7,7 +7,7 @@
   new TradingView.widget(
   {
   "autosize": true,
-  "symbol": "NSE:ROHLTD",
+  "symbol": "BSE:ROHLTD",
   "interval": "D",
   "timezone": "Asia/Kolkata",
   "theme": "light",
@@ -18,21 +18,27 @@
   "allow_symbol_change": true,
   "studies":  [
     {
-        id: "MASimple@tv-basicstudies",
+        id: "MAExp@tv-basicstudies",
+        inputs: {
+            length: 10
+            }
+    },
+    {
+        id: "MAExp@tv-basicstudies",
         inputs: {
             length: 20
+            }
+    },
+    {
+        id: "MAExp@tv-basicstudies",
+        inputs: {
+            length: 50
             }
     },
     {
         id: "MASimple@tv-basicstudies",
         inputs: {
             length: 100
-            }
-    },
-    {
-        id: "MASimple@tv-basicstudies",
-        inputs: {
-            length: 44
             }
     },
     {
